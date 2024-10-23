@@ -13,6 +13,7 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
+import androidx.compose.foundation.layout.width
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Done
 import androidx.compose.material3.Icon
@@ -48,6 +49,10 @@ fun Layout(modifier: Modifier = Modifier){
         DetailMhasiswa(
             judul = "email",
             isinya = "Muhaguskurniawan@gmail.com"
+        )
+        DetailMhasiswa(
+            judul = "Nomor Telepon",
+            isinya = "082271638230"
         )
     }
 }
@@ -93,8 +98,8 @@ fun DetailMhasiswa(
     Row(modifier = Modifier.fillMaxWidth()
         .padding(16.dp),
          horizontalArrangement = Arrangement.SpaceBetween){
-        Text(judul,modifier = Modifier )
-        Text(" : ")
-        Text(isinya, modifier = Modifier)
+        Text(judul,modifier = Modifier.weight(0.8f))
+        Text(" : ", modifier = Modifier.weight(0.8f))
+        Text(isinya, modifier = Modifier.weight(2f))
     }
 }
